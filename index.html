@@ -17,15 +17,19 @@
             <input placeholder="Title" type="text" name="title" id="title" required>
             <input placeholder="Author" type="text" name="author" id="author" required>
             <input placeholder="Pages" type="number" name="pages" id="pages" required>
-            <label for="read">Read</label>
-            <input type="checkbox" name="read" id="read">
-            <button type="submit" class="open-btn">Add</button>
-            <button class="close-btn">Close</button>
+            <div class="checkbox-row">
+                <label for="read">Read</label>
+                <input type="checkbox" name="read" id="read">
+            </div>
+            <div class="button-row">
+                <input type="submit" class="submit-btn" value="Add">
+                <button type="button" class="close-btn">Close</button>
+            </div>
         </form>
     </dialog>
 
     <article>
-        
+
     </article>
 
     <script src="scripts/script.js" defer></script>

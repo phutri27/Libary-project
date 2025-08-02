@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(210, 203, 203);
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -18,7 +22,132 @@
   border: none;
   color: white;
   background-color: green;
+  transition: background-color 0.15s ease-in;
   cursor: pointer;
+}
+.header button:hover {
+  background-color: rgb(2, 198, 2);
+}
+
+article {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+article div {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+  font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+article div p {
+  background-color: beige;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid black;
+}
+article div .read-btn,
+article div .del-btn {
+  padding: 10px 10px;
+  border: 2px solid black;
+  background-color: rgb(253, 188, 68);
+  border-radius: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  transition: 0.15s ease-in;
+  cursor: pointer;
+}
+article div .read-btn:hover,
+article div .del-btn:hover {
+  background-color: hsl(20, 30%, 50%);
+}
+article div .del-btn {
+  margin-top: 10px;
+  background-color: rgb(55, 178, 219);
+}
+
+dialog {
+  background-color: lightcoral;
+}
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 50vh;
+  width: 30vw;
+  background-color: lightcoral;
+  border: none;
+}
+dialog form legend {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3rem;
+}
+dialog form input {
+  border-radius: 10px;
+  height: 10vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+}
+dialog form input:focus {
+  border: 2px solid rgb(24, 10, 208);
+  outline: none;
+}
+dialog form input::placeholder {
+  font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+dialog form .checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+dialog form .checkbox-row input {
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #000;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+dialog form .checkbox-row input:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 4px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+dialog form .button-row {
+  display: flex;
+  gap: 5px;
+}
+dialog form .button-row input,
+dialog form .button-row button {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: pointer;
+  background-color: rgb(108, 168, 195);
+  color: white;
+  font-weight: bold;
+  transition: 0.15s ease-in;
+  font-size: 1.2rem;
+}
+dialog form .button-row input:hover,
+dialog form .button-row button:hover {
+  background-color: rgb(14, 85, 108);
 }
 
 /*# sourceMappingURL=style.css.map */

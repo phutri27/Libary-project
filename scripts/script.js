@@ -22,7 +22,7 @@ function displayLibrary() {
   article.innerHTML = '';
   myLibrary.forEach((bookItem, index) => {
     const div = document.createElement("div");
-
+    
     const bookTitle  = document.createElement("p");
     bookTitle.textContent = "Title: " + bookItem.title;
 
@@ -90,7 +90,7 @@ function register(){
   })
 
   closeButton.addEventListener('click', (e)=>{
-    e.preventDefault;
+    e.preventDefault();
     dialog.close();
   })
 
